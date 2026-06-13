@@ -1,0 +1,30 @@
+I will share the SQL Codes for creating the table structure you can create you our data base and add these tables in them
+
+CREATE TABLE crypto_prices (
+    id VARCHAR(50) PRIMARY KEY,
+    symbol VARCHAR(20),
+    name VARCHAR(100),
+    current_price NUMERIC,
+    market_cap BIGINT,
+    market_cap_rank INT,
+    total_volume BIGINT,
+    high_24h NUMERIC,
+    low_24h NUMERIC,
+    price_change_percentage_24h NUMERIC,
+    circulating_supply NUMERIC,
+    total_supply NUMERIC,
+    max_supply NUMERIC,
+    last_updated TIMESTAMP
+);
+
+
+CREATE TABLE crypto_price_history (
+    coin_id VARCHAR(50),
+    symbol VARCHAR(20),
+    name VARCHAR(100),
+    current_price NUMERIC,
+    market_cap BIGINT,
+    total_volume BIGINT,
+    price_change_percentage_24h NUMERIC,
+    last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
